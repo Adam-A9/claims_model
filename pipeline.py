@@ -1,6 +1,7 @@
 import sqlite3
 import pandas as pd
 import logging
+from pathlib import Path
 
 # -------------------------
 # LOGGING CONFIG
@@ -14,20 +15,21 @@ logging.basicConfig(
     ]
 )
 
-DB_PATH = "commercial_insurance.db"
-CSV_PATH = r"C:\Users\adama\OneDrive\Desktop\Project\claims_model\small_commercial_underwriting_raw.csv"
-SILVER_SQL_PATH = r"C:\Users\adama\OneDrive\Desktop\Project\claims_model\bronze_to_silver.sql"
-GOLD_SQL_PATH = r"C:\Users\adama\OneDrive\Desktop\Project\claims_model\silver_to_gold.sql"
+BASE_DIR = Path(__file__).resolve().parent
+DB_PATH = BASE_DIR / "commercial_insurance.db"
+CSV_PATH = BASE_DIR / "small_commercial_underwriting_raw.csv"
+SILVER_SQL_PATH = BASE_DIR / "bronze_to_silver.sql"
+GOLD_SQL_PATH = BASE_DIR / "silver_to_gold.sql"
 
 # -------------------------
 # TASKS
 # -------------------------
 
-def ingest_raw(conn):
+def ingest_raw(conn, csv_path=CSV_PATH):
     logging.info("Step 1: Starting CSV ingestion into staging_raw")
 
     try:
-        df = pd.read_csv(CSV_PATH)
+        df = pd.read_csv(csv_path)
 
         logging.info(f"CSV loaded successfully | rows={len(df)} | columns={len(df.columns)}")
 
@@ -45,11 +47,11 @@ def ingest_raw(conn):
         raise
 
 
-def run_silver_sql(conn):
+def run_silver_sql(conn, sql_path=SILVER_SQL_PATH):
     logging.info("Step 2: Starting silver transformation SQL execution")
 
     try:
-        with open(SILVER_SQL_PATH, "r") as f:
+        with open(sql_path, "r", encoding="utf-8") as f:
             sql = f.read()
 
         cursor = conn.cursor()
@@ -62,11 +64,11 @@ def run_silver_sql(conn):
         logging.exception(f"Step 2 failed: SQL execution error - {e}")
         raise
 
-def run_gold_sql(conn):
+def run_gold_sql(conn, sql_path=GOLD_SQL_PATH):
     logging.info("Step 3: Starting gold transformation SQL execution")
 
     try:
-        with open(GOLD_SQL_PATH, "r") as f:
+        with open(sql_path, "r", encoding="utf-8") as f:
             sql = f.read()
 
         cursor = conn.cursor()
@@ -167,10 +169,10 @@ def validate(conn):
 # PIPELINE RUNNER (DAG-LIKE)
 # -------------------------
 
-def run_pipeline():
+def run_pipeline(db_path=DB_PATH):
     logging.info("PIPELINE STARTED")
 
-    conn = sqlite3.connect(DB_PATH)
+    conn = sqlite3.connect(db_path)
 
     try:
         ingest_raw(conn)
@@ -182,6 +184,7 @@ def run_pipeline():
 
     except Exception as e:
         logging.error(f"PIPELINE FAILED: {e}")
+        raise
 
     finally:
         conn.close()

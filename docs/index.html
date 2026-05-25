@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Economic Calendar</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f8fa;
+      --panel: #ffffff;
+      --ink: #1f2933;
+      --muted: #52616f;
+      --line: #d8dee6;
+      --accent: #0f766e;
+      --accent-soft: #d9f0ed;
+      --warn: #9f580a;
+      --released: #0b6b37;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      line-height: 1.45;
+    }
+
+    header {
+      background: var(--panel);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .shell {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 13px;
+      text-align: right;
+    }
+
+    main {
+      padding: 22px 0 36px;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .search {
+      width: min(420px, 100%);
+      min-height: 40px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 0 12px;
+      font: inherit;
+      background: var(--panel);
+      color: var(--ink);
+    }
+
+    .status {
+      min-height: 24px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    table {
+      width: 100%;
+      min-width: 880px;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+      white-space: nowrap;
+    }
+
+    th {
+      background: #eef2f5;
+      color: #2f3b46;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    tbody tr:hover {
+      background: #f1f7f6;
+    }
+
+    .event {
+      min-width: 260px;
+      white-space: normal;
+      font-weight: 700;
+    }
+
+    .subtle {
+      display: block;
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    .value {
+      font-variant-numeric: tabular-nums;
+      font-weight: 700;
+    }
+
+    .released {
+      color: var(--released);
+    }
+
+    .pending {
+      color: var(--warn);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .empty {
+      padding: 28px 0;
+      color: var(--muted);
+      text-align: center;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    @media (max-width: 720px) {
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .meta {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="shell topbar">
+      <h1>Economic Calendar</h1>
+      <div class="meta" id="meta">Loading calendar...</div>
+    </div>
+  </header>
+  <main class="shell">
+    <div class="toolbar">
+      <input class="search" id="search" type="search" placeholder="Filter events, categories, or countries" autocomplete="off">
+      <div class="status" id="status"></div>
+    </div>
+    <div class="table-wrap" id="tableWrap" hidden>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Country</th>
+            <th>Event</th>
+            <th>Previous</th>
+            <th>Estimate</th>
+            <th>Actual</th>
+            <th>Updated</th>
+          </tr>
+        </thead>
+        <tbody id="calendarBody"></tbody>
+      </table>
+    </div>
+    <div class="empty" id="empty" hidden>No calendar events available.</div>
+  </main>
+
+  <script>
+    const state = { events: [] };
+    const body = document.getElementById('calendarBody');
+    const meta = document.getElementById('meta');
+    const status = document.getElementById('status');
+    const search = document.getElementById('search');
+    const tableWrap = document.getElementById('tableWrap');
+    const empty = document.getElementById('empty');
+
+    const display = (value) => value && String(value).trim() ? value : 'Pending';
+    const valueClass = (value) => value && String(value).trim() ? 'value released' : 'value pending';
+    const escapeHtml = (value) => String(value ?? '').replace(/[&<>"']/g, (char) => ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      '"': '&quot;',
+      "'": '&#39;'
+    }[char]));
+
+    function rowTemplate(event) {
+      const estimate = event.estimate || event.forecast || event.te_forecast || '';
+      const sourceLink = event.url || event.source_url || '';
+      const safeSourceLink = /^https?:\/\//.test(sourceLink) ? sourceLink : '';
+      const source = safeSourceLink ? `<a href="${escapeHtml(safeSourceLink)}" target="_blank" rel="noreferrer">source</a>` : '';
+      return `
+        <tr>
+          <td>${escapeHtml(display(event.date))}</td>
+          <td>${escapeHtml(display(event.time))}</td>
+          <td>${escapeHtml(display(event.country))}</td>
+          <td class="event">
+            ${escapeHtml(event.event || 'Untitled event')}
+            <span class="subtle">${escapeHtml([event.category, event.reference].filter(Boolean).join(' / '))}</span>
+          </td>
+          <td class="value">${escapeHtml(display(event.previous))}</td>
+          <td class="value">${escapeHtml(display(estimate))}</td>
+          <td class="${valueClass(event.actual)}">${escapeHtml(display(event.actual))}</td>
+          <td>
+            ${escapeHtml(display(event.last_update))}
+            <span class="subtle">${source}</span>
+          </td>
+        </tr>`;
+    }
+
+    function render() {
+      const query = search.value.trim().toLowerCase();
+      const events = state.events.filter((event) => {
+        const haystack = [event.country, event.category, event.event, event.reference].join(' ').toLowerCase();
+        return !query || haystack.includes(query);
+      });
+
+      body.innerHTML = events.map(rowTemplate).join('');
+      tableWrap.hidden = events.length === 0;
+      empty.hidden = events.length !== 0;
+      status.textContent = `${events.length} of ${state.events.length} events`;
+    }
+
+    async function loadCalendar() {
+      try {
+        const response = await fetch('economic_calendar.json', { cache: 'no-store' });
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const payload = await response.json();
+        state.events = Array.isArray(payload.events) ? payload.events : [];
+        meta.textContent = payload.generated_at
+          ? `Updated ${new Date(payload.generated_at).toLocaleString()} from ${payload.source || 'calendar source'}`
+          : 'Calendar data has not been generated yet';
+        render();
+      } catch (error) {
+        meta.textContent = 'Calendar failed to load';
+        status.textContent = error.message;
+        empty.hidden = false;
+      }
+    }
+
+    search.addEventListener('input', render);
+    loadCalendar();
+  </script>
+</body>
+</html>

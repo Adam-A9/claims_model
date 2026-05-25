@@ -1,0 +1,40 @@
+name: Economic Calendar
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/15 * * * 1-5"
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-calendar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Refresh calendar data
+        env:
+          ECONOMIC_CALENDAR_API_KEY: ${{ secrets.ECONOMIC_CALENDAR_API_KEY }}
+        run: |
+          python economic_calendar.py --output docs/economic_calendar.json --days-back 2 --days-forward 14
+
+      - name: Commit refreshed calendar
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/economic_calendar.json
+          if git diff --cached --quiet; then
+            echo "No calendar changes"
+          else
+            git commit -m "Refresh economic calendar"
+            git push
+          fi

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-27T17:34:24.001656+00:00",
+  "generated_at": "2026-05-27T22:00:01.341824+00:00",
   "source": "Trading Economics",
   "source_url": "https://tradingeconomics.com/united-states/calendar/api?source=calendar",
   "events": [
@@ -626,12 +626,12 @@
     {
       "event_id": "395849",
       "date": "2026-05-27",
-      "time": "08:30 PM",
+      "time": "09:30 PM",
       "country": "United States",
       "category": "Api Crude Oil Stock Change",
       "event": "API Crude Oil Stock Change",
       "reference": "MAY/22",
-      "actual": "",
+      "actual": "-2.8M",
       "previous": "-9.1M",
       "estimate": "",
       "forecast": "",
@@ -1992,7 +1992,7 @@
       "event": "API Crude Oil Stock Change",
       "reference": "MAY/29",
       "actual": "",
-      "previous": "",
+      "previous": "-2.8M",
       "estimate": "",
       "forecast": "",
       "te_forecast": "",

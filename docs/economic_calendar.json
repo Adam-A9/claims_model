@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-27T22:00:01.341824+00:00",
+  "generated_at": "2026-05-27T23:25:24.050104+00:00",
   "source": "Trading Economics",
   "source_url": "https://tradingeconomics.com/united-states/calendar/api?source=calendar",
   "events": [
@@ -793,7 +793,7 @@
       "reference": "Q1",
       "actual": "",
       "previous": "5.7%",
-      "estimate": "4.1%",
+      "estimate": "5.7%",
       "forecast": "4.1%",
       "te_forecast": "",
       "revised": "",

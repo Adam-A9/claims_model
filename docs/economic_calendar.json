@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T17:45:35.705152+00:00",
+  "generated_at": "2026-05-28T22:18:51.679440+00:00",
   "source": "Trading Economics",
   "source_url": "https://tradingeconomics.com/united-states/calendar/api?source=calendar",
   "events": [
@@ -1231,7 +1231,7 @@
       "category": "Central Bank Balance Sheet",
       "event": "Fed Balance Sheet",
       "reference": "MAY/27",
-      "actual": "",
+      "actual": "$6.704T",
       "previous": "$6.713T",
       "estimate": "",
       "forecast": "",
@@ -2532,7 +2532,7 @@
       "event": "Fed Balance Sheet",
       "reference": "JUN/03",
       "actual": "",
-      "previous": "",
+      "previous": "$6.704T",
       "estimate": "",
       "forecast": "",
       "te_forecast": "",
@@ -5961,6 +5961,26 @@
       "source": "Trading Economics",
       "source_url": "https://tradingeconomics.com/united-states/money-supply-m2",
       "url": "https://tradingeconomics.com/united-states/money-supply-m2",
+      "last_update": ""
+    },
+    {
+      "event_id": "396088",
+      "date": "2026-06-23",
+      "time": "08:30 PM",
+      "country": "United States",
+      "category": "Api Crude Oil Stock Change",
+      "event": "API Crude Oil Stock Change",
+      "reference": "JUN/19",
+      "actual": "",
+      "previous": "",
+      "estimate": "",
+      "forecast": "",
+      "te_forecast": "",
+      "revised": "",
+      "importance": "",
+      "source": "Trading Economics",
+      "source_url": "https://tradingeconomics.com/united-states/api-crude-oil-stock-change",
+      "url": "https://tradingeconomics.com/united-states/api-crude-oil-stock-change",
       "last_update": ""
     }
   ]

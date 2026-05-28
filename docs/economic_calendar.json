@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-28T01:23:04.762470+00:00",
+  "generated_at": "2026-05-28T05:50:23.375467+00:00",
   "source": "Trading Economics",
   "source_url": "https://tradingeconomics.com/united-states/calendar/api?source=calendar",
   "events": [
@@ -933,7 +933,7 @@
       "reference": "MAY/22",
       "actual": "",
       "previous": "101Bcf",
-      "estimate": "",
+      "estimate": "96Bcf",
       "forecast": "",
       "te_forecast": "",
       "revised": "",

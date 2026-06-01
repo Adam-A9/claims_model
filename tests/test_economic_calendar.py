@@ -37,8 +37,106 @@ def test_normalize_api_event_populates_market_values():
     assert event.estimate == "130K"
     assert event.forecast == "130K"
     assert event.te_forecast == "125K"
+    assert event.display_event == "Non Farm Payrolls"
+    assert event.interval == ""
+    assert event.chart_label == "Non Farm Payrolls"
     assert event.source_url == "https://www.bls.gov/"
     assert event.url == "https://tradingeconomics.com/united-states/non-farm-payrolls"
+
+
+def test_normalize_api_event_extracts_interval_labels():
+    event = normalize_api_event(
+        {
+            "CalendarId": "2",
+            "Date": "2026-06-01T14:00:00",
+            "Country": "United States",
+            "Category": "Construction Spending MoM",
+            "Event": "Construction Spending MoM",
+            "Actual": "0.4%",
+            "Previous": "0.6%",
+            "Forecast": "0.2%",
+            "URL": "/united-states/construction-spending",
+        }
+    )
+
+    assert event.display_event == "Construction Spending"
+    assert event.interval == "MoM"
+    assert event.interval_label == "MoM"
+    assert event.chart_label == "Construction Spending (MoM)"
+    assert event.chart_url
+
+
+def test_normalize_api_event_extracts_dod_interval_labels():
+    event = normalize_api_event(
+        {
+            "CalendarId": "22",
+            "Date": "2026-06-01T14:00:00",
+            "Country": "United States",
+            "Category": "Retail Sales DoD",
+            "Event": "Retail Sales DoD",
+            "Actual": "0.3%",
+            "Previous": "0.1%",
+            "Forecast": "0.2%",
+            "URL": "/united-states/retail-sales",
+        }
+    )
+
+    assert event.display_event == "Retail Sales"
+    assert event.interval == "DoD"
+    assert event.chart_label == "Retail Sales (DoD)"
+
+
+def test_plain_rate_events_show_level_interval():
+    event = normalize_api_event(
+        {
+            "CalendarId": "3",
+            "Date": "2026-06-01T14:00:00",
+            "Country": "United States",
+            "Category": "Interest Rate",
+            "Event": "Fed Interest Rate Decision",
+            "Actual": "4.50%",
+            "Previous": "4.50%",
+            "Forecast": "4.50%",
+            "URL": "/united-states/interest-rate",
+        }
+    )
+
+    assert event.display_event == "Fed Interest Rate Decision"
+    assert event.interval == "Level"
+    assert event.chart_label == "Fed Interest Rate Decision (Level)"
+
+
+def test_rate_category_does_not_mark_speeches_as_level():
+    event = normalize_api_event(
+        {
+            "CalendarId": "4",
+            "Date": "2026-06-01T16:00:00",
+            "Country": "United States",
+            "Category": "Interest Rate",
+            "Event": "Fed Powell Speech",
+            "URL": "/united-states/interest-rate",
+        }
+    )
+
+    assert event.display_event == "Fed Powell Speech"
+    assert event.interval == ""
+    assert event.chart_label == "Fed Powell Speech"
+
+
+def test_mortgage_applications_do_not_use_rate_level_interval():
+    event = normalize_api_event(
+        {
+            "CalendarId": "5",
+            "Date": "2026-06-01T16:00:00",
+            "Country": "United States",
+            "Category": "Mortgage Applications",
+            "Event": "MBA Mortgage Applications",
+            "URL": "/united-states/mortgage-applications",
+        }
+    )
+
+    assert event.interval == ""
+    assert event.chart_label == "MBA Mortgage Applications"
 
 
 def test_html_parser_extracts_previous_estimate_and_actual():
@@ -70,6 +168,9 @@ def test_html_parser_extracts_previous_estimate_and_actual():
     assert events[0].date == "2026-05-25"
     assert events[0].time == "08:30 AM"
     assert events[0].event == "Inflation Rate YoY"
+    assert events[0].display_event == "Inflation Rate"
+    assert events[0].interval == "YoY"
+    assert events[0].chart_label == "Inflation Rate (YoY)"
     assert events[0].reference == "APR"
     assert events[0].actual == "3.4%"
     assert events[0].previous == "3.5%"
@@ -132,7 +233,10 @@ def test_calendar_payload_sorts_by_release_time():
         country="United States",
         category="Labor",
         event="Afternoon Release",
+        display_event="Afternoon Release",
         reference="",
+        interval="",
+        interval_label="",
         actual="",
         previous="",
         estimate="",
@@ -143,6 +247,8 @@ def test_calendar_payload_sorts_by_release_time():
         source="",
         source_url="",
         url="",
+        chart_label="Afternoon Release",
+        chart_url="",
         last_update="",
     )
     earlier = EconomicCalendarEvent(
@@ -152,7 +258,10 @@ def test_calendar_payload_sorts_by_release_time():
         country="United States",
         category="Labor",
         event="Morning Release",
+        display_event="Morning Release",
         reference="",
+        interval="",
+        interval_label="",
         actual="",
         previous="",
         estimate="",
@@ -163,6 +272,8 @@ def test_calendar_payload_sorts_by_release_time():
         source="",
         source_url="",
         url="",
+        chart_label="Morning Release",
+        chart_url="",
         last_update="",
     )
 

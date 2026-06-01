@@ -100,7 +100,7 @@
 
     table {
       width: 100%;
-      min-width: 880px;
+      min-width: 1080px;
       border-collapse: collapse;
     }
 
@@ -129,6 +129,36 @@
       min-width: 260px;
       white-space: normal;
       font-weight: 700;
+    }
+
+    .interval {
+      color: #2f3b46;
+      font-weight: 700;
+    }
+
+    .chart-cell {
+      min-width: 180px;
+    }
+
+    .chart {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .chart img {
+      width: 96px;
+      height: 48px;
+      border: 1px solid var(--line);
+      object-fit: cover;
+      background: #f7f8fa;
+    }
+
+    .chart-label {
+      max-width: 170px;
+      color: var(--muted);
+      font-size: 12px;
+      white-space: normal;
     }
 
     .subtle {
@@ -201,9 +231,11 @@
             <th>Time</th>
             <th>Country</th>
             <th>Event</th>
+            <th>Interval</th>
             <th>Previous</th>
             <th>Estimate</th>
             <th>Actual</th>
+            <th>Chart</th>
             <th>Updated</th>
           </tr>
         </thead>
@@ -223,6 +255,7 @@
     const empty = document.getElementById('empty');
 
     const display = (value) => value && String(value).trim() ? value : 'Pending';
+    const displayInterval = (event) => event.interval_label || event.interval || 'Value';
     const valueClass = (value) => value && String(value).trim() ? 'value released' : 'value pending';
     const escapeHtml = (value) => String(value ?? '').replace(/[&<>"']/g, (char) => ({
       '&': '&amp;',
@@ -237,18 +270,27 @@
       const sourceLink = event.url || event.source_url || '';
       const safeSourceLink = /^https?:\/\//.test(sourceLink) ? sourceLink : '';
       const source = safeSourceLink ? `<a href="${escapeHtml(safeSourceLink)}" target="_blank" rel="noreferrer">source</a>` : '';
+      const chartUrl = /^https?:\/\//.test(event.chart_url || '') ? event.chart_url : '';
+      const eventName = event.display_event || event.event || 'Untitled event';
+      const interval = displayInterval(event);
+      const chartLabel = event.chart_label || `${eventName} (${interval})`;
+      const chart = chartUrl
+        ? `<div class="chart"><img src="${escapeHtml(chartUrl)}" alt="${escapeHtml(chartLabel)}"><span class="chart-label">${escapeHtml(chartLabel)}</span></div>`
+        : `<span class="subtle">${escapeHtml(chartLabel)}</span>`;
       return `
         <tr>
           <td>${escapeHtml(display(event.date))}</td>
           <td>${escapeHtml(display(event.time))}</td>
           <td>${escapeHtml(display(event.country))}</td>
           <td class="event">
-            ${escapeHtml(event.event || 'Untitled event')}
+            ${escapeHtml(eventName)}
             <span class="subtle">${escapeHtml([event.category, event.reference].filter(Boolean).join(' / '))}</span>
           </td>
+          <td class="interval">${escapeHtml(interval)}</td>
           <td class="value">${escapeHtml(display(event.previous))}</td>
           <td class="value">${escapeHtml(display(estimate))}</td>
           <td class="${valueClass(event.actual)}">${escapeHtml(display(event.actual))}</td>
+          <td class="chart-cell">${chart}</td>
           <td>
             ${escapeHtml(display(event.last_update))}
             <span class="subtle">${source}</span>
@@ -259,7 +301,15 @@
     function render() {
       const query = search.value.trim().toLowerCase();
       const events = state.events.filter((event) => {
-        const haystack = [event.country, event.category, event.event, event.reference].join(' ').toLowerCase();
+        const haystack = [
+          event.country,
+          event.category,
+          event.display_event,
+          event.event,
+          event.interval_label,
+          event.interval,
+          event.reference
+        ].join(' ').toLowerCase();
         return !query || haystack.includes(query);
       });
 

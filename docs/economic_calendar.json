@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-04T05:07:45.805879+00:00",
+  "generated_at": "2026-06-04T12:20:36.838634+00:00",
   "source": "Trading Economics",
   "source_url": "https://tradingeconomics.com/united-states/calendar/api?source=calendar",
   "events": [
@@ -764,7 +764,7 @@
       "reference": "MAY",
       "interval": "",
       "interval_label": "",
-      "actual": "",
+      "actual": "97.006K",
       "previous": "83.387K",
       "estimate": "90.0K",
       "forecast": "90.0K",

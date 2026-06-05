@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-05T18:23:21.417775+00:00",
+  "generated_at": "2026-06-05T20:27:24.226118+00:00",
   "source": "Trading Economics",
   "source_url": "https://tradingeconomics.com/united-states/calendar/api?source=calendar",
   "events": [
@@ -739,12 +739,12 @@
       "reference": "APR",
       "interval": "",
       "interval_label": "",
-      "actual": "",
-      "previous": "$24.86B",
+      "actual": "$20.70B",
+      "previous": "$22.30B",
       "estimate": "$18B",
       "forecast": "$17.0B",
       "te_forecast": "",
-      "revised": "",
+      "revised": "®",
       "importance": "",
       "source": "Trading Economics",
       "source_url": "https://tradingeconomics.com/united-states/consumer-credit",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-08T16:56:33.150367+00:00",
+  "generated_at": "2026-06-09T08:23:33.904056+00:00",
   "source": "Trading Economics",
   "source_url": "https://tradingeconomics.com/united-states/calendar/api?source=calendar",
   "events": [
@@ -141,7 +141,7 @@
       "interval_label": "",
       "actual": "",
       "previous": "$-60.3B",
-      "estimate": "$-56.4B",
+      "estimate": "$-56.1B",
       "forecast": "$-57.9B",
       "te_forecast": "",
       "revised": "",
@@ -266,7 +266,7 @@
       "interval_label": "",
       "actual": "",
       "previous": "4.02M",
-      "estimate": "4.06M",
+      "estimate": "4.07M",
       "forecast": "4.04M",
       "te_forecast": "",
       "revised": "",
@@ -441,7 +441,7 @@
       "interval_label": "",
       "actual": "",
       "previous": "-6.75M",
-      "estimate": "",
+      "estimate": "-3.4M",
       "forecast": "",
       "te_forecast": "",
       "revised": "",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-10T16:26:59.269948+00:00",
+  "generated_at": "2026-06-10T21:36:04.219196+00:00",
   "source": "Trading Economics",
   "source_url": "https://tradingeconomics.com/united-states/calendar/api?source=calendar",
   "events": [
@@ -914,7 +914,7 @@
       "reference": "",
       "interval": "Level",
       "interval_label": "Level",
-      "actual": "",
+      "actual": "4.538%",
       "previous": "4.468%",
       "estimate": "",
       "forecast": "",
@@ -939,7 +939,7 @@
       "reference": "MAY",
       "interval": "",
       "interval_label": "",
-      "actual": "",
+      "actual": "$-293B",
       "previous": "$215B",
       "estimate": "$-275M",
       "forecast": "$-310.0B",

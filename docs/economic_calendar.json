@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T19:13:02.124797+00:00",
+  "generated_at": "2026-06-11T21:31:29.816415+00:00",
   "source": "Trading Economics",
   "source_url": "https://tradingeconomics.com/united-states/calendar/api?source=calendar",
   "events": [
@@ -1014,7 +1014,7 @@
       "reference": "JUN/10",
       "interval": "",
       "interval_label": "",
-      "actual": "",
+      "actual": "$6.725T",
       "previous": "$6.711T",
       "estimate": "",
       "forecast": "",
@@ -7276,6 +7276,31 @@
       "url": "https://tradingeconomics.com/united-states/3-year-note-yield",
       "chart_label": "3-Year Note Auction (Level)",
       "chart_url": "https://d3fy651gv2fhd3.cloudfront.net/charts/calendar-419351.png?h=80&w=160&n=4&y=0&y2=0&x=0&title=false&lbl=0&bg=0&v=V20230410&url=/united-states/3-year-note-yield",
+      "last_update": ""
+    },
+    {
+      "event_id": "396234",
+      "date": "2026-07-07",
+      "time": "08:30 PM",
+      "country": "United States",
+      "category": "Api Crude Oil Stock Change",
+      "event": "API Crude Oil Stock Change",
+      "display_event": "API Crude Oil Stock Change",
+      "reference": "JUL/03",
+      "interval": "",
+      "interval_label": "",
+      "actual": "",
+      "previous": "",
+      "estimate": "",
+      "forecast": "",
+      "te_forecast": "",
+      "revised": "",
+      "importance": "",
+      "source": "Trading Economics",
+      "source_url": "https://tradingeconomics.com/united-states/api-crude-oil-stock-change",
+      "url": "https://tradingeconomics.com/united-states/api-crude-oil-stock-change",
+      "chart_label": "API Crude Oil Stock Change",
+      "chart_url": "https://d3fy651gv2fhd3.cloudfront.net/charts/calendar-396234.png?h=80&w=160&n=4&y=0&y2=0&x=0&title=false&lbl=0&bg=0&v=V20230410&url=/united-states/api-crude-oil-stock-change",
       "last_update": ""
     }
   ]

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-11T07:06:07.891055+00:00",
+  "generated_at": "2026-06-11T11:48:54.415419+00:00",
   "source": "Trading Economics",
   "source_url": "https://tradingeconomics.com/united-states/calendar/api?source=calendar",
   "events": [
@@ -7001,6 +7001,31 @@
       "url": "https://tradingeconomics.com/united-states/6-month-bill-yield",
       "chart_label": "6-Month Bill Auction (Level)",
       "chart_url": "https://d3fy651gv2fhd3.cloudfront.net/charts/calendar-396230.png?h=80&w=160&n=4&y=0&y2=0&x=0&title=false&lbl=0&bg=0&v=V20230410&url=/united-states/6-month-bill-yield",
+      "last_update": ""
+    },
+    {
+      "event_id": "398888",
+      "date": "2026-07-07",
+      "time": "10:00 AM",
+      "country": "United States",
+      "category": "Lmi Logistics Managers Index",
+      "event": "LMI Logistics Managers Index",
+      "display_event": "LMI Logistics Managers Index",
+      "reference": "JUN",
+      "interval": "",
+      "interval_label": "",
+      "actual": "",
+      "previous": "69.5",
+      "estimate": "",
+      "forecast": "",
+      "te_forecast": "",
+      "revised": "",
+      "importance": "",
+      "source": "Trading Economics",
+      "source_url": "https://tradingeconomics.com/united-states/lmi-logistics-managers-index-current",
+      "url": "https://tradingeconomics.com/united-states/lmi-logistics-managers-index-current",
+      "chart_label": "LMI Logistics Managers Index",
+      "chart_url": "https://d3fy651gv2fhd3.cloudfront.net/charts/calendar-398888.png?h=20&w=40&n=4&y=0&y2=0&x=0&title=false&lbl=0&bg=0&v=V20230410&url=/united-states/lmi-logistics-managers-index-current",
       "last_update": ""
     }
   ]

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-16T19:23:52.315170+00:00",
+  "generated_at": "2026-06-16T22:01:23.518775+00:00",
   "source": "Trading Economics",
   "source_url": "https://tradingeconomics.com/united-states/calendar/api?source=calendar",
   "events": [
@@ -589,7 +589,7 @@
       "reference": "JUN/12",
       "interval": "",
       "interval_label": "",
-      "actual": "",
+      "actual": "-8.33M",
       "previous": "-9.119M",
       "estimate": "-4.5M",
       "forecast": "",
@@ -2265,7 +2265,7 @@
       "interval": "",
       "interval_label": "",
       "actual": "",
-      "previous": "",
+      "previous": "-8.33M",
       "estimate": "",
       "forecast": "",
       "te_forecast": "",
@@ -2275,7 +2275,7 @@
       "source_url": "https://tradingeconomics.com/united-states/api-crude-oil-stock-change",
       "url": "https://tradingeconomics.com/united-states/api-crude-oil-stock-change",
       "chart_label": "API Crude Oil Stock Change",
-      "chart_url": "https://d3fy651gv2fhd3.cloudfront.net/charts/calendar-396088.png?h=80&w=160&n=4&y=0&y2=0&x=0&title=false&lbl=0&bg=0&v=V20230410&url=/united-states/api-crude-oil-stock-change",
+      "chart_url": "https://d3fy651gv2fhd3.cloudfront.net/charts/calendar-396088.png?h=20&w=40&n=4&y=0&y2=0&x=0&title=false&lbl=0&bg=0&v=V20230410&url=/united-states/api-crude-oil-stock-change",
       "last_update": ""
     },
     {

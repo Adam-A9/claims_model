@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-19T16:33:07.884933+00:00",
+  "generated_at": "2026-06-19T18:23:30.627211+00:00",
   "source": "Trading Economics",
   "source_url": "https://tradingeconomics.com/united-states/calendar/api?source=calendar",
   "events": [
@@ -6851,6 +6851,31 @@
       "url": "https://tradingeconomics.com/united-states/calendar",
       "chart_label": "Nopa Crush Report",
       "chart_url": "https://d3fy651gv2fhd3.cloudfront.net/charts/calendar-419453.png?h=80&w=160&n=4&y=0&y2=0&x=0&title=false&lbl=0&bg=0&v=V20230410&url=/united-states/calendar",
+      "last_update": ""
+    },
+    {
+      "event_id": "418769",
+      "date": "2026-07-15",
+      "time": "06:00 PM",
+      "country": "United States",
+      "category": "Interest Rate",
+      "event": "Fed Beige Book",
+      "display_event": "Fed Beige Book",
+      "reference": "",
+      "interval": "",
+      "interval_label": "",
+      "actual": "",
+      "previous": "",
+      "estimate": "",
+      "forecast": "",
+      "te_forecast": "",
+      "revised": "",
+      "importance": "",
+      "source": "Trading Economics",
+      "source_url": "https://tradingeconomics.com/united-states/interest-rate",
+      "url": "https://tradingeconomics.com/united-states/interest-rate",
+      "chart_label": "Fed Beige Book",
+      "chart_url": "https://d3fy651gv2fhd3.cloudfront.net/charts/calendar-418769.png?h=80&w=160&n=4&y=0&y2=0&x=0&title=false&lbl=0&bg=0&v=V20230410&url=/united-states/interest-rate",
       "last_update": ""
     }
   ]

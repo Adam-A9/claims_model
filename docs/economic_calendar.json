@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-25T17:30:32.321856+00:00",
+  "generated_at": "2026-06-25T21:15:27.452486+00:00",
   "source": "Trading Economics",
   "source_url": "https://tradingeconomics.com/united-states/calendar/api?source=calendar",
   "events": [
@@ -1314,7 +1314,7 @@
       "reference": "JUN/24",
       "interval": "",
       "interval_label": "",
-      "actual": "",
+      "actual": "$6.736T",
       "previous": "$6.736T",
       "estimate": "",
       "forecast": "",
@@ -7251,6 +7251,31 @@
       "url": "https://tradingeconomics.com/united-states/calendar",
       "chart_label": "6-Week Bill Auction (Level)",
       "chart_url": "https://d3fy651gv2fhd3.cloudfront.net/charts/calendar-420085.png?h=80&w=160&n=4&y=0&y2=0&x=0&title=false&lbl=0&bg=0&v=V20230410&url=/united-states/calendar",
+      "last_update": ""
+    },
+    {
+      "event_id": "396327",
+      "date": "2026-07-21",
+      "time": "08:30 PM",
+      "country": "United States",
+      "category": "Api Crude Oil Stock Change",
+      "event": "API Crude Oil Stock Change",
+      "display_event": "API Crude Oil Stock Change",
+      "reference": "JUL/17",
+      "interval": "",
+      "interval_label": "",
+      "actual": "",
+      "previous": "",
+      "estimate": "",
+      "forecast": "",
+      "te_forecast": "",
+      "revised": "",
+      "importance": "",
+      "source": "Trading Economics",
+      "source_url": "https://tradingeconomics.com/united-states/api-crude-oil-stock-change",
+      "url": "https://tradingeconomics.com/united-states/api-crude-oil-stock-change",
+      "chart_label": "API Crude Oil Stock Change",
+      "chart_url": "https://d3fy651gv2fhd3.cloudfront.net/charts/calendar-396327.png?h=80&w=160&n=4&y=0&y2=0&x=0&title=false&lbl=0&bg=0&v=V20230410&url=/united-states/api-crude-oil-stock-change",
       "last_update": ""
     }
   ]

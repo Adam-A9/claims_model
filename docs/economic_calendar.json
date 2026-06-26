@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-26T16:20:06.382628+00:00",
+  "generated_at": "2026-06-26T18:10:15.211206+00:00",
   "source": "Trading Economics",
   "source_url": "https://tradingeconomics.com/united-states/calendar/api?source=calendar",
   "events": [
@@ -1089,7 +1089,7 @@
       "reference": "JUN/26",
       "interval": "",
       "interval_label": "",
-      "actual": "",
+      "actual": "440",
       "previous": "433",
       "estimate": "436",
       "forecast": "",
@@ -1114,7 +1114,7 @@
       "reference": "JUN/26",
       "interval": "",
       "interval_label": "",
-      "actual": "",
+      "actual": "573",
       "previous": "563",
       "estimate": "",
       "forecast": "",
@@ -2790,7 +2790,7 @@
       "interval": "",
       "interval_label": "",
       "actual": "",
-      "previous": "",
+      "previous": "440",
       "estimate": "",
       "forecast": "",
       "te_forecast": "",
@@ -2800,7 +2800,7 @@
       "source_url": "https://tradingeconomics.com/united-states/crude-oil-rigs",
       "url": "https://tradingeconomics.com/united-states/crude-oil-rigs",
       "chart_label": "Baker Hughes Oil Rig Count",
-      "chart_url": "https://d3fy651gv2fhd3.cloudfront.net/charts/calendar-396217.png?h=80&w=160&n=4&y=0&y2=0&x=0&title=false&lbl=0&bg=0&v=V20230410&url=/united-states/crude-oil-rigs",
+      "chart_url": "https://d3fy651gv2fhd3.cloudfront.net/charts/calendar-396217.png?h=20&w=40&n=4&y=0&y2=0&x=0&title=false&lbl=0&bg=0&v=V20230410&url=/united-states/crude-oil-rigs",
       "last_update": ""
     },
     {
@@ -2815,7 +2815,7 @@
       "interval": "",
       "interval_label": "",
       "actual": "",
-      "previous": "",
+      "previous": "573",
       "estimate": "",
       "forecast": "",
       "te_forecast": "",
@@ -2825,7 +2825,7 @@
       "source_url": "https://tradingeconomics.com/united-states/total-rigs",
       "url": "https://tradingeconomics.com/united-states/total-rigs",
       "chart_label": "Baker Hughes Total Rigs Count",
-      "chart_url": "https://d3fy651gv2fhd3.cloudfront.net/charts/calendar-396218.png?h=80&w=160&n=4&y=0&y2=0&x=0&title=false&lbl=0&bg=0&v=V20230410&url=/united-states/total-rigs",
+      "chart_url": "https://d3fy651gv2fhd3.cloudfront.net/charts/calendar-396218.png?h=20&w=40&n=4&y=0&y2=0&x=0&title=false&lbl=0&bg=0&v=V20230410&url=/united-states/total-rigs",
       "last_update": ""
     },
     {
@@ -7176,6 +7176,31 @@
       "url": "https://tradingeconomics.com/united-states/17-week-bill-yield",
       "chart_label": "17-Week Bill Auction (Level)",
       "chart_url": "https://d3fy651gv2fhd3.cloudfront.net/charts/calendar-419338.png?h=80&w=160&n=4&y=0&y2=0&x=0&title=false&lbl=0&bg=0&v=V20230410&url=/united-states/17-week-bill-yield",
+      "last_update": ""
+    },
+    {
+      "event_id": "419366",
+      "date": "2026-07-22",
+      "time": "05:00 PM",
+      "country": "United States",
+      "category": "20 Year Bond Yield",
+      "event": "20-Year Bond Auction",
+      "display_event": "20-Year Bond Auction",
+      "reference": "",
+      "interval": "Level",
+      "interval_label": "Level",
+      "actual": "",
+      "previous": "",
+      "estimate": "",
+      "forecast": "",
+      "te_forecast": "",
+      "revised": "",
+      "importance": "",
+      "source": "Trading Economics",
+      "source_url": "https://tradingeconomics.com/united-states/20-year-bond-yield",
+      "url": "https://tradingeconomics.com/united-states/20-year-bond-yield",
+      "chart_label": "20-Year Bond Auction (Level)",
+      "chart_url": "https://d3fy651gv2fhd3.cloudfront.net/charts/calendar-419366.png?h=80&w=160&n=4&y=0&y2=0&x=0&title=false&lbl=0&bg=0&v=V20230410&url=/united-states/20-year-bond-yield",
       "last_update": ""
     }
   ]

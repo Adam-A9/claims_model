@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-30T01:50:29.874781+00:00",
+  "generated_at": "2026-06-30T10:07:27.063395+00:00",
   "source": "Trading Economics",
   "source_url": "https://tradingeconomics.com/united-states/calendar/api?source=calendar",
   "events": [
@@ -916,7 +916,7 @@
       "interval_label": "",
       "actual": "",
       "previous": "-6.088M",
-      "estimate": "",
+      "estimate": "-4.8M",
       "forecast": "",
       "te_forecast": "",
       "revised": "",

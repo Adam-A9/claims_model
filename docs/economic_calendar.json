@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-02T18:14:34.517038+00:00",
+  "generated_at": "2026-07-02T21:17:03.811448+00:00",
   "source": "Trading Economics",
   "source_url": "https://tradingeconomics.com/united-states/calendar/api?source=calendar",
   "events": [
@@ -1214,7 +1214,7 @@
       "reference": "JUL/01",
       "interval": "",
       "interval_label": "",
-      "actual": "",
+      "actual": "$6.725T",
       "previous": "$6.736T",
       "estimate": "$ 6.5T",
       "forecast": "$ 6.5T",
@@ -2641,8 +2641,8 @@
       "interval_label": "",
       "actual": "",
       "previous": "",
-      "estimate": "",
-      "forecast": "",
+      "estimate": "$6.725T",
+      "forecast": "$6.725T",
       "te_forecast": "",
       "revised": "",
       "importance": "",
@@ -6801,6 +6801,31 @@
       "url": "https://tradingeconomics.com/united-states/money-supply-m2",
       "chart_label": "Money Supply",
       "chart_url": "https://d3fy651gv2fhd3.cloudfront.net/charts/calendar-399012.png?h=20&w=40&n=4&y=0&y2=0&x=0&title=false&lbl=0&bg=0&v=V20230410&url=/united-states/money-supply-m2",
+      "last_update": ""
+    },
+    {
+      "event_id": "396376",
+      "date": "2026-07-28",
+      "time": "08:30 PM",
+      "country": "United States",
+      "category": "Api Crude Oil Stock Change",
+      "event": "API Crude Oil Stock Change",
+      "display_event": "API Crude Oil Stock Change",
+      "reference": "JUL/24",
+      "interval": "",
+      "interval_label": "",
+      "actual": "",
+      "previous": "",
+      "estimate": "",
+      "forecast": "",
+      "te_forecast": "",
+      "revised": "",
+      "importance": "",
+      "source": "Trading Economics",
+      "source_url": "https://tradingeconomics.com/united-states/api-crude-oil-stock-change",
+      "url": "https://tradingeconomics.com/united-states/api-crude-oil-stock-change",
+      "chart_label": "API Crude Oil Stock Change",
+      "chart_url": "https://d3fy651gv2fhd3.cloudfront.net/charts/calendar-396376.png?h=80&w=160&n=4&y=0&y2=0&x=0&title=false&lbl=0&bg=0&v=V20230410&url=/united-states/api-crude-oil-stock-change",
       "last_update": ""
     }
   ]

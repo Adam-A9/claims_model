@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T18:02:19.555086+00:00",
+  "generated_at": "2026-07-03T19:50:21.698333+00:00",
   "source": "Trading Economics",
   "source_url": "https://tradingeconomics.com/united-states/calendar/api?source=calendar",
   "events": [
@@ -6676,6 +6676,31 @@
       "url": "https://tradingeconomics.com/united-states/interest-rate",
       "chart_label": "Fed Interest Rate Decision (Level)",
       "chart_url": "https://d3fy651gv2fhd3.cloudfront.net/charts/calendar-390603.png?h=20&w=40&n=4&y=0&y2=0&x=0&title=false&lbl=0&bg=0&v=V20230410&url=/united-states/interest-rate",
+      "last_update": ""
+    },
+    {
+      "event_id": "390634",
+      "date": "2026-07-29",
+      "time": "06:30 PM",
+      "country": "United States",
+      "category": "Interest Rate",
+      "event": "Fed Press Conference",
+      "display_event": "Fed Press Conference",
+      "reference": "",
+      "interval": "",
+      "interval_label": "",
+      "actual": "",
+      "previous": "",
+      "estimate": "",
+      "forecast": "",
+      "te_forecast": "",
+      "revised": "",
+      "importance": "",
+      "source": "Trading Economics",
+      "source_url": "https://tradingeconomics.com/united-states/interest-rate",
+      "url": "https://tradingeconomics.com/united-states/interest-rate",
+      "chart_label": "Fed Press Conference",
+      "chart_url": "https://d3fy651gv2fhd3.cloudfront.net/charts/calendar-390634.png?h=80&w=160&n=4&y=0&y2=0&x=0&title=false&lbl=0&bg=0&v=V20230410&url=/united-states/interest-rate",
       "last_update": ""
     }
   ]

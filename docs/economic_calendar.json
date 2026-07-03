@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T14:51:25.290883+00:00",
+  "generated_at": "2026-07-03T16:37:25.742021+00:00",
   "source": "Trading Economics",
   "source_url": "https://tradingeconomics.com/united-states/calendar/api?source=calendar",
   "events": [
@@ -6601,6 +6601,31 @@
       "url": "https://tradingeconomics.com/united-states/refinery-crude-runs",
       "chart_label": "EIA Refinery Crude Runs Change",
       "chart_url": "https://d3fy651gv2fhd3.cloudfront.net/charts/calendar-396385.png?h=80&w=160&n=4&y=0&y2=0&x=0&title=false&lbl=0&bg=0&v=V20230410&url=/united-states/refinery-crude-runs",
+      "last_update": ""
+    },
+    {
+      "event_id": "419337",
+      "date": "2026-07-29",
+      "time": "03:30 PM",
+      "country": "United States",
+      "category": "17 Week Bill Yield",
+      "event": "17-Week Bill Auction",
+      "display_event": "17-Week Bill Auction",
+      "reference": "",
+      "interval": "Level",
+      "interval_label": "Level",
+      "actual": "",
+      "previous": "",
+      "estimate": "",
+      "forecast": "",
+      "te_forecast": "",
+      "revised": "",
+      "importance": "",
+      "source": "Trading Economics",
+      "source_url": "https://tradingeconomics.com/united-states/17-week-bill-yield",
+      "url": "https://tradingeconomics.com/united-states/17-week-bill-yield",
+      "chart_label": "17-Week Bill Auction (Level)",
+      "chart_url": "https://d3fy651gv2fhd3.cloudfront.net/charts/calendar-419337.png?h=80&w=160&n=4&y=0&y2=0&x=0&title=false&lbl=0&bg=0&v=V20230410&url=/united-states/17-week-bill-yield",
       "last_update": ""
     }
   ]

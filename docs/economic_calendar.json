@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-07T18:50:04.987266+00:00",
+  "generated_at": "2026-07-07T20:50:48.882888+00:00",
   "source": "Trading Economics",
   "source_url": "https://tradingeconomics.com/united-states/calendar/api?source=calendar",
   "events": [
@@ -556,7 +556,7 @@
     {
       "event_id": "396234",
       "date": "2026-07-07",
-      "time": "08:30 PM",
+      "time": "",
       "country": "United States",
       "category": "Api Crude Oil Stock Change",
       "event": "API Crude Oil Stock Change",
@@ -564,7 +564,7 @@
       "reference": "JUL/03",
       "interval": "",
       "interval_label": "",
-      "actual": "",
+      "actual": "-0.399M",
       "previous": "-6.072M",
       "estimate": "-1.5M",
       "forecast": "",
@@ -2015,7 +2015,7 @@
       "interval": "",
       "interval_label": "",
       "actual": "",
-      "previous": "",
+      "previous": "-0.399M",
       "estimate": "",
       "forecast": "",
       "te_forecast": "",
@@ -2025,7 +2025,7 @@
       "source_url": "https://tradingeconomics.com/united-states/api-crude-oil-stock-change",
       "url": "https://tradingeconomics.com/united-states/api-crude-oil-stock-change",
       "chart_label": "API Crude Oil Stock Change",
-      "chart_url": "https://d3fy651gv2fhd3.cloudfront.net/charts/calendar-396278.png?h=80&w=160&n=4&y=0&y2=0&x=0&title=false&lbl=0&bg=0&v=V20230410&url=/united-states/api-crude-oil-stock-change",
+      "chart_url": "https://d3fy651gv2fhd3.cloudfront.net/charts/calendar-396278.png?h=20&w=40&n=4&y=0&y2=0&x=0&title=false&lbl=0&bg=0&v=V20230410&url=/united-states/api-crude-oil-stock-change",
       "last_update": ""
     },
     {

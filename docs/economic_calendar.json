@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-09T20:57:29.177306+00:00",
+  "generated_at": "2026-07-09T22:38:47.330508+00:00",
   "source": "Trading Economics",
   "source_url": "https://tradingeconomics.com/united-states/calendar/api?source=calendar",
   "events": [
@@ -2715,7 +2715,7 @@
       "interval": "",
       "interval_label": "",
       "actual": "",
-      "previous": "",
+      "previous": "$6.736T",
       "estimate": "",
       "forecast": "",
       "te_forecast": "",
@@ -2725,7 +2725,7 @@
       "source_url": "https://tradingeconomics.com/united-states/central-bank-balance-sheet",
       "url": "https://tradingeconomics.com/united-states/central-bank-balance-sheet",
       "chart_label": "Fed Balance Sheet",
-      "chart_url": "https://d3fy651gv2fhd3.cloudfront.net/charts/calendar-397773.png?h=80&w=160&n=4&y=0&y2=0&x=0&title=false&lbl=0&bg=0&v=V20230410&url=/united-states/central-bank-balance-sheet",
+      "chart_url": "https://d3fy651gv2fhd3.cloudfront.net/charts/calendar-397773.png?h=20&w=40&n=4&y=0&y2=0&x=0&title=false&lbl=0&bg=0&v=V20230410&url=/united-states/central-bank-balance-sheet",
       "last_update": ""
     },
     {

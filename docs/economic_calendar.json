@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-09T17:32:59.873172+00:00",
+  "generated_at": "2026-07-09T19:13:03.642328+00:00",
   "source": "Trading Economics",
   "source_url": "https://tradingeconomics.com/united-states/calendar/api?source=calendar",
   "events": [
@@ -6901,6 +6901,31 @@
       "url": "https://tradingeconomics.com/united-states/calendar",
       "chart_label": "6-Week Bill Auction (Level)",
       "chart_url": "https://d3fy651gv2fhd3.cloudfront.net/charts/calendar-420087.png?h=80&w=160&n=4&y=0&y2=0&x=0&title=false&lbl=0&bg=0&v=V20230410&url=/united-states/calendar",
+      "last_update": ""
+    },
+    {
+      "event_id": "398476",
+      "date": "2026-08-04",
+      "time": "",
+      "country": "United States",
+      "category": "Total Vehicle Sales",
+      "event": "Total Vehicle Sales",
+      "display_event": "Total Vehicle Sales",
+      "reference": "JUL",
+      "interval": "",
+      "interval_label": "",
+      "actual": "",
+      "previous": "",
+      "estimate": "",
+      "forecast": "",
+      "te_forecast": "",
+      "revised": "",
+      "importance": "",
+      "source": "Trading Economics",
+      "source_url": "https://tradingeconomics.com/united-states/total-vehicle-sales",
+      "url": "https://tradingeconomics.com/united-states/total-vehicle-sales",
+      "chart_label": "Total Vehicle Sales",
+      "chart_url": "https://d3fy651gv2fhd3.cloudfront.net/charts/calendar-398476.png?h=80&w=160&n=4&y=0&y2=0&x=0&title=false&lbl=0&bg=0&v=V20230410&url=/united-states/total-vehicle-sales",
       "last_update": ""
     }
   ]

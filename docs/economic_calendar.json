@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-10T19:06:21.908513+00:00",
+  "generated_at": "2026-07-10T20:43:10.921652+00:00",
   "source": "Trading Economics",
   "source_url": "https://tradingeconomics.com/united-states/calendar/api?source=calendar",
   "events": [
@@ -431,7 +431,7 @@
     {
       "event_id": "396266",
       "date": "2026-07-10",
-      "time": "",
+      "time": "07:00 PM",
       "country": "United States",
       "category": "Crude Oil Rigs",
       "event": "Baker Hughes Oil Rig Count",

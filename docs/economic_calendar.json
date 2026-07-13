@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-13T15:36:05.176853+00:00",
+  "generated_at": "2026-07-13T19:06:01.013214+00:00",
   "source": "Trading Economics",
   "source_url": "https://tradingeconomics.com/united-states/calendar/api?source=calendar",
   "events": [
@@ -114,7 +114,7 @@
       "reference": "JUN",
       "interval": "",
       "interval_label": "",
-      "actual": "",
+      "actual": "$-120B",
       "previous": "$-293B",
       "estimate": "$-132.8B",
       "forecast": "$21.0B",

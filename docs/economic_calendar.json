@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-14T08:55:04.405499+00:00",
+  "generated_at": "2026-07-14T10:50:24.065454+00:00",
   "source": "Trading Economics",
   "source_url": "https://tradingeconomics.com/united-states/calendar/api?source=calendar",
   "events": [
@@ -139,7 +139,7 @@
       "reference": "JUN",
       "interval": "",
       "interval_label": "",
-      "actual": "",
+      "actual": "97.4",
       "previous": "95.3",
       "estimate": "95.8",
       "forecast": "96",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T16:15:37.621599+00:00",
+  "generated_at": "2026-07-21T14:23:18.330530+00:00",
   "source": "Trading Economics",
   "source_url": "https://tradingeconomics.com/united-states/calendar/api?source=calendar",
   "events": [
@@ -114,12 +114,12 @@
       "reference": "",
       "interval": "",
       "interval_label": "",
-      "actual": "",
-      "previous": "19.75K",
+      "actual": "16.5K",
+      "previous": "19.25K",
       "estimate": "",
       "forecast": "",
       "te_forecast": "",
-      "revised": "",
+      "revised": "®",
       "importance": "",
       "source": "Trading Economics",
       "source_url": "https://tradingeconomics.com/united-states/adp-employment-change-weekly",
@@ -139,7 +139,7 @@
       "reference": "JUL/18",
       "interval": "YoY",
       "interval_label": "YoY",
-      "actual": "",
+      "actual": "7.8%",
       "previous": "8.2%",
       "estimate": "",
       "forecast": "",
@@ -1415,7 +1415,7 @@
       "interval": "",
       "interval_label": "",
       "actual": "",
-      "previous": "",
+      "previous": "16.5K",
       "estimate": "",
       "forecast": "",
       "te_forecast": "",
@@ -1425,7 +1425,7 @@
       "source_url": "https://tradingeconomics.com/united-states/adp-employment-change-weekly",
       "url": "https://tradingeconomics.com/united-states/adp-employment-change-weekly",
       "chart_label": "ADP Employment Change Weekly",
-      "chart_url": "https://d3fy651gv2fhd3.cloudfront.net/charts/calendar-397840.png?h=80&w=160&n=4&y=0&y2=0&x=0&title=false&lbl=0&bg=0&v=V20230410&url=/united-states/adp-employment-change-weekly",
+      "chart_url": "https://d3fy651gv2fhd3.cloudfront.net/charts/calendar-397840.png?h=20&w=40&n=4&y=0&y2=0&x=0&title=false&lbl=0&bg=0&v=V20230410&url=/united-states/adp-employment-change-weekly",
       "last_update": ""
     },
     {
@@ -1515,7 +1515,7 @@
       "interval": "YoY",
       "interval_label": "YoY",
       "actual": "",
-      "previous": "",
+      "previous": "7.8%",
       "estimate": "",
       "forecast": "",
       "te_forecast": "",
@@ -1525,7 +1525,7 @@
       "source_url": "https://tradingeconomics.com/united-states/redbook-index",
       "url": "https://tradingeconomics.com/united-states/redbook-index",
       "chart_label": "Redbook (YoY)",
-      "chart_url": "https://d3fy651gv2fhd3.cloudfront.net/charts/calendar-396375.png?h=80&w=160&n=4&y=0&y2=0&x=0&title=false&lbl=0&bg=0&v=V20230410&url=/united-states/redbook-index",
+      "chart_url": "https://d3fy651gv2fhd3.cloudfront.net/charts/calendar-396375.png?h=20&w=40&n=4&y=0&y2=0&x=0&title=false&lbl=0&bg=0&v=V20230410&url=/united-states/redbook-index",
       "last_update": ""
     },
     {

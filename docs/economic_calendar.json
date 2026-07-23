@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-23T16:08:30.406823+00:00",
+  "generated_at": "2026-07-23T17:47:02.854246+00:00",
   "source": "Trading Economics",
   "source_url": "https://tradingeconomics.com/united-states/calendar/api?source=calendar",
   "events": [
@@ -714,7 +714,7 @@
       "reference": "",
       "interval": "Level",
       "interval_label": "Level",
-      "actual": "",
+      "actual": "2.438%",
       "previous": "2.169%",
       "estimate": "",
       "forecast": "",
